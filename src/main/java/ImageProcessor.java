@@ -14,7 +14,7 @@ public class ImageProcessor {
                 // TODO: Change this to your uploaded image
             Image img = new Image("resources/yourfile.png");
             
-            Filter f = new RegularPixelReplaceFilter();
+            Filter f = new RegularPixelReplaceFilter(1, new Pixel(255, 0, 255));
             Image modifiedImg = f.apply(img);
             modifiedImg.saveToFile("resources/pixel_replace.png", Image.FORMAT.PNG);
             System.out.println("Successfully applied regular pixel replace filter.");
